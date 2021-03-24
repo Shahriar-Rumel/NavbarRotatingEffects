@@ -8,7 +8,7 @@ body{
 
 .container{
     transform-origin:top left;
-    transition: ease-in 0.5s linear;
+    transition: ease-in 0.6s linear;
     width:100vw;
     height:100vh;
     background-color: rgba(27, 27, 27, 0.842);
@@ -27,8 +27,8 @@ body{
 }
 .circle{
     background-color: rgb(6, 124, 65);
-    width:220px;
-    height:202px;
+    width:180px;
+    height:180px;
     border-radius: 50%;
     position: relative;
     transition: transform 0.5 linear;
@@ -43,7 +43,7 @@ button{
     height: 100px;
     background: transparent;
     border:0;
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(247, 223, 11);
     cursor: pointer; 
 }
@@ -52,7 +52,7 @@ button:focus{
     outline: none;
 }
 .circle button#open{
-    left:56%;
+    left:62%;
 }
 .container.show-nav #open{
     display:none;
@@ -64,7 +64,7 @@ button:focus{
 }
 .container.show-nav  button#close{
     top:50%;
-  
+    left:56%;
     display:block;
     
 }
@@ -107,7 +107,7 @@ p{
 }
 .container.show-nav + nav li{
     transform:translateX(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 nav{
@@ -126,7 +126,7 @@ nav ul li{
     font-weight: 500;
     color: rgb(247, 223, 11);
     transform:translateX(-150%);
-    transition: transform 0.4 ease-in;
+    transition: transform 0.1 ease-in;
 }
 nav ul li +li{
     margin-left: 30px;
@@ -153,4 +153,33 @@ nav ul li i{
         font-size: 18px;
         line-height: 25px;
     }
+    .circle{
+     
+        width:220px;
+        height:220px;
+     
+    }
+    button{
+       
+        font-size: 30px;
+        
+    }
+    .circle button#open{
+        left:56%;
+    }
+    .container.show-nav #open{
+        display:none;
+    }
+    
+    .container button#close{
+        display:none;
+        
+    }
+    .container.show-nav  button#close{
+        top:50%;
+        left:50%;
+        display:block;
+        
+    }
+
 }
