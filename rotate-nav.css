@@ -1,0 +1,158 @@
+body{
+    margin :0px;
+    padding:0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(2, 90, 71, 0.76);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container{
+    transform-origin:top left;
+    transition: ease-in 0.5s linear;
+    width:100vw;
+    min-height:100vh;
+    background-color: rgba(27, 27, 27, 0.842);
+    border-radius: 5px;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-container{
+    
+    position:fixed;
+    top:-100px;
+    left:-100px;
+}
+.circle{
+    background-color: rgb(6, 124, 65);
+    width:220px;
+    height:202px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5 linear;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+button{
+    position: absolute;
+    top:48%;
+    left:50%;
+    height: 100px;
+    background: transparent;
+    border:0;
+    font-size: 30px;
+    color: rgb(247, 223, 11);
+    cursor: pointer; 
+}
+
+button:focus{
+    outline: none;
+}
+.circle button#open{
+    left:56%;
+}
+.container.show-nav #open{
+    display:none;
+}
+
+.container button#close{
+    display:none;
+    
+}
+.container.show-nav  button#close{
+    top:50%;
+  
+    display:block;
+    
+}
+
+.title{
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    color: rgb(252, 227, 8);
+    padding-top:50px;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 15px,
+    rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.image img{
+    max-width: 100%;
+    width:500px;
+    height:300px;
+   margin-left:50%;
+   transform:translateX(-50%);
+    margin-top:50px;
+  
+}
+.hogwarts-description{
+    background-color: rgba(157, 163, 163, 0.808);
+    width:90%;
+    margin: auto; 
+    margin-top:50px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+p{
+    padding:30px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.container.show-nav + nav li{
+    transform:translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav{
+    position: fixed;
+    bottom:40;
+    left:0;
+    z-index: 100;
+}
+
+nav ul{
+    list-style-type: none;
+    padding:5px;
+}
+nav ul li{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(247, 223, 11);
+    transform:translateX(-150%);
+    transition: transform 0.4 ease-in;
+}
+nav ul li +li{
+    margin-left: 30px;
+}
+nav ul li +li +li{
+    margin-left: 70px;
+}
+nav ul li i{
+    font-size: 20px;
+    margin:10px;
+    color:rgb(206, 200, 200);
+}
+@media(min-width:1000px){
+    h1{
+        padding-top:100px;
+    }
+    .hogwarts-description{
+      
+        width:70%;
+       
+    }
+    p{
+      
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
